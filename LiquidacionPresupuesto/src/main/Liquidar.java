@@ -1,15 +1,18 @@
 package main;
 
+import utils.CLogger;
+
 public class Liquidar {
 
 	public static void main(String[] args) {
+		CLogger.writeConsole("START");
 
 		LiquidacionPresupuestaria liquidar = new LiquidacionPresupuestaria();
 
 		if (liquidar.liquidarPresupuesto()) {
-			System.out.println("TERMINATED OK");
+			CLogger.writeConsole("TERMINATED OK");
 		} else {
-			System.out.println("TERMINATED NOK");
+			CLogger.writeConsole("TERMINATED NOK");
 		}
 
 	}
